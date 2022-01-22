@@ -1,3 +1,3 @@
-FROM alpine:3.1
+FROM fsfe/reuse:latest
 
-CMD echo "hello people!"
+CMD echo "wow!"
