@@ -1,3 +1,3 @@
-FROM alpine:3
+FROM alpine:3.1
 
 CMD echo "hello people!"
