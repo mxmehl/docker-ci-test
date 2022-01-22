@@ -1,4 +1,4 @@
-FROM fsfe/reuse:0.5
+FROM fsfe/reuse:0.6
 
 RUN whoami
 
