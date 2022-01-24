@@ -108,7 +108,7 @@ jobs:
     # Depends on successful Docker build/test
     needs:
       - docker_test
-    if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
+    if: ${{ github.event_name != 'pull_request' && ( github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' ) }}
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
