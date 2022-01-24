@@ -1,4 +1,4 @@
-name: Publish Docker image on new version release
+name: Test, build, and publish Docker images
 
 on:
   push:
