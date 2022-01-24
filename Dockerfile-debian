@@ -1,5 +1,1 @@
-FROM debian:stable-slim
-
-RUN whoami
-
-CMD echo "wow!"
+FROM fsfe/reuse:latest-debian
