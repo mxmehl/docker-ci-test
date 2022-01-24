@@ -9,8 +9,6 @@ on:
   pull_request:
 
 jobs:
-  prerequisite:
-    uses: mxmehl/docker-ci-test/.github/workflows/reuse.yaml@main
   # ===========================================================================
   # Test Docker images
   # ===========================================================================
@@ -43,7 +41,6 @@ jobs:
     runs-on: ubuntu-latest
     # Depends on successful Docker build/test
     needs:
-      - prerequisite
       - docker_test
     if: ${{ github.event_name != 'pull_request' && startsWith(github.ref, 'refs/tags/v') }}
     steps:
@@ -103,7 +100,6 @@ jobs:
     runs-on: ubuntu-latest
     # Depends on successful Docker build/test
     needs:
-      - prerequisite
       - docker_test
     if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
     steps:
