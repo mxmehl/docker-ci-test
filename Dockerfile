@@ -1,1 +1,1 @@
-FROM fsfe/reuse:latest
+FROM alpine:3
